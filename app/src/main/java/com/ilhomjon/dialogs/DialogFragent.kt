@@ -38,7 +38,10 @@ lateinit var root:View
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_dialog_fragent, container, false)
 
-        root.btn_close_fragment.setOnClickListener {
+        root.btn_2.setOnClickListener {
+            fragmentManager?.beginTransaction()?.remove(this)?.commit()
+        }
+        root.btn_1.setOnClickListener {
             fragmentManager?.beginTransaction()?.remove(this)?.commit()
         }
 
